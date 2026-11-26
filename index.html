@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 0; padding: 2rem 1rem; background: #f3f6fb; color: #172033; }
+    main { max-width: 34rem; margin: 2rem auto; padding: 2rem; background: white; border-radius: 1rem; box-shadow: 0 0.5rem 2rem #17203312; }
+    h1 { margin-top: 0; }
+    label { display: block; margin: 1.25rem 0 0.4rem; font-weight: 600; }
+    input, select, textarea, button { box-sizing: border-box; width: 100%; padding: 0.75rem; border: 1px solid #cbd3e1; border-radius: 0.5rem; font: inherit; }
+    textarea { min-height: 8rem; resize: vertical; }
+    button { margin-top: 1.5rem; border: 0; background: #2457d6; color: white; font-weight: 700; cursor: pointer; }
+    button:hover { background: #1946b5; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Share your feedback</h1>
+    <p>Tell us how we can improve.</p>
+    <form action="/feedback" method="post">
+      <label for="name">Name</label>
+      <input id="name" name="name" autocomplete="name" required>
+
+      <label for="rating">How was your experience?</label>
+      <select id="rating" name="rating" required>
+        <option value="">Choose a rating</option>
+        <option value="5">Excellent</option>
+        <option value="4">Good</option>
+        <option value="3">Okay</option>
+        <option value="2">Poor</option>
+        <option value="1">Very poor</option>
+      </select>
+
+      <label for="comments">Comments</label>
+      <textarea id="comments" name="comments" required></textarea>
+
+      <button type="submit">Send feedback</button>
+    </form>
+  </main>
+</body>
+</html>
